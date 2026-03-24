@@ -14,4 +14,13 @@ class User:  #allows the user to be given a name
     def __str__(self):
         return f"{self.username} username,{self.email} email"  #Displays the username and email of a user
 
+class Client(User): #client class inherits user class traits
+    def __init__(self, username, password, email):
+        super().__init__(username, password, email)
+
+    def display_client(self, clients):
+        for client in clients: #This will loop through all clients then display them
+            print(client)
+
+
        
