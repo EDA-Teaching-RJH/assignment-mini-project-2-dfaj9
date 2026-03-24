@@ -14,7 +14,7 @@ class User:  #allows the user to be given a name
         self.email = email #saves the users email address
 
     def __str__(self):
-        return f"{self.username} username,{self.email} email"  #Displays the username and email of a user
+        return f"{self.username} username,  {self.email} email"  #Displays the username and email of a user
 
 class Client(User): #client class inherits user class traits
     def __init__(self, username, password, email):
