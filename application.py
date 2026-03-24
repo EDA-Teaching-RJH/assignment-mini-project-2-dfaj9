@@ -1,11 +1,13 @@
+from regex2 import valid_email, strong_password
+
 class User:  #allows the user to be given a name
     def __init__(self, username, password, email):
         if not username: #These statements checks to see if information are missing
             raise ValueError("A username is needed!") 
-        if not password:
-            raise ValueError("A password is needed!")
-        if not email:
-            raise ValueError("An Email is needed!")
+        if not strong_password(password):
+            raise ValueError("This password is either empty/weak! ")
+        if not valid_email(email):
+            raise ValueError("An Email is needed!") 
         
         self.username = username #saves the users username
         self.password = password #saves the users password
